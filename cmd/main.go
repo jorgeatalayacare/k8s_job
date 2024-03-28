@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	fr "github.com/jorgeatalayacare/k8s_job/file_reader"
+	fr "github.com/jorgeatalayacare/k8s_job/pkg"
 )
 
 func main() {
