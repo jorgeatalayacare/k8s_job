@@ -1,7 +1,18 @@
 package main
 
-import "github.com/k8s_job/pkg/file_reader"
+import (
+	"fmt"
+	"os"
+
+	fr "github.com/jorgeatalayacare/k8s_job/pkg/file_reader"
+)
 
 func main() {
-	file_reader.ReadPrintFile("file.txt")
+	if len(os.Args) < 2 {
+		fmt.Fprintf(os.Stderr, "Usage: %s <file path>\n", os.Args[0])
+		os.Exit(1)
+	}
+	filePath := os.Args[1]
+
+	fr.ReadPrintFile(filePath)
 }
