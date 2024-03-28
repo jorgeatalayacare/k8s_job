@@ -1,7 +1,6 @@
-# test-nginx-dns-resolution-failures
-Adhoc scripts to reproduce nginx dns resolution failures  
+# Kubernetes job sample
 
-## Steps to reproduce 
+## Steps to deploy
 
 ### Environment Config  
 If you’re using MAC silicon then this you have installed both [brew](https://brew.sh/) and rosetta. To install rosetta:
