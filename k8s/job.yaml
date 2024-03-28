@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: file-reader
+spec:
+  template:
+    spec:
+      containers:
+      - name: my-container
+        image: file-reader:<CHANGE_ME> 
+        args:
+          - ./file.txt
+      restartPolicy: Never
+  backoffLimit: 4  # Number of retries before considering the Job as failed
